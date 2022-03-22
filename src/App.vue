@@ -1,17 +1,16 @@
-<template>
 
+<template>
   <router-view />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import {provide, ref} from "vue";
-
+<script lang="ts">
+import { ref, provide } from "vue";
 export default {
-  name: 'App',
-  setup(){
-    const menuVisible = ref(false)
-    provide('menuVisible', menuVisible) // set
-  }
-}
+  name: "App",
+  setup() {
+    const width = document.documentElement.clientWidth;
+    const menuVisible = ref(width <= 500 ? false : true);
+    provide("menuVisible", menuVisible); // set
+  },
+};
 </script>
