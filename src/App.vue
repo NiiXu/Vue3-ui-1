@@ -1,7 +1,5 @@
 <template>
-  <div>导航栏 |
-    <router-link to="/">Chx</router-link> |
-    <router-link to="/xxx">Chx2</router-link></div>
+  <div>导航栏 </div>
   <hr/>
   <router-view />
 </template>
